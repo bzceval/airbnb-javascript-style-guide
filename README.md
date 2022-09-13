@@ -110,13 +110,17 @@ Diğer Stil Kılavuzları
     ```
 
 **[⬆ back to top](#table-of-contents)**
+**[⬆ yukarı çık](#table-of-contents)**
 
 ## References
+## Referanslar
 
   <a name="references--prefer-const"></a><a name="2.1"></a>
   - [2.1](#references--prefer-const) Use `const` for all of your references; avoid using `var`. eslint: [`prefer-const`](https://eslint.org/docs/rules/prefer-const), [`no-const-assign`](https://eslint.org/docs/rules/no-const-assign)
+  - [2.1](#references--prefer-const) Use `const` for all of your references; avoid using `var`. eslint: [`prefer-const`](https://eslint.org/docs/rules/prefer-const), [`no-const-assign`](https://eslint.org/docs/rules/no-const-assign)
 
     > Why? This ensures that you can’t reassign your references, which can lead to bugs and difficult to comprehend code.
+    > Neden? This ensures that you can’t reassign your references, which can lead to bugs and difficult to comprehend code.
 
     ```javascript
     // bad
