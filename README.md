@@ -65,9 +65,11 @@ Diğer Stil Kılavuzları
   1. [Amendments](#amendments)
 
 ## Types
+## Türler
 
   <a name="types--primitives"></a><a name="1.1"></a>
   - [1.1](#types--primitives) **Primitives**: When you access a primitive type you work directly on its value.
+  - [1.1](#types--primitives) **İlkel Türler**: İlkel bir türe eriştiğinizde doğrudan onun değeri ile çalışırsınız.
 
     - `string`
     - `number`
@@ -78,30 +80,33 @@ Diğer Stil Kılavuzları
     - `bigint`
 
     ```javascript
-    const foo = 1;
-    let bar = foo;
+    const foo = 1; //foo'nun değeri değişemez çünkü const
+    let bar = foo; //bar => 1
 
-    bar = 9;
+    bar = 9; //bar => 9
 
     console.log(foo, bar); // => 1, 9
     ```
 
     - Symbols and BigInts cannot be faithfully polyfilled, so they should not be used when targeting browsers/environments that don’t support them natively.
+    - Symbol ve BigInt türleri tam olarak doğrulukla polyfill edilemez. Bundan dolayı native olarak bu türleri desteklemeyen tarayıcı ve ortamlarda bunları kullanmamalısınız.
+    //polyfilly: yeni tarzdaki js kodlarını eski tarza çevirerek browserların anlayabileceği hale getirir.
 
   <a name="types--complex"></a><a name="1.2"></a>
   - [1.2](#types--complex)  **Complex**: When you access a complex type you work on a reference to its value.
+  - [1.2](#types--complex)  **Karmaşık Türleri**: Karmaşık bir türe eriştiğinizde bu türün değerinin referansı ile çalışırsınız(yani adresi).
 
     - `object`
     - `array`
     - `function`
 
     ```javascript
-    const foo = [1, 2];
-    const bar = foo;
+    const foo = [1, 2]; //array bir adrese atanır 0x0FFF45
+    const bar = foo; //bar'ın değerini foo'ya eşitlendi. Foo referance tipli değişken olduğundan tipini değil adresini tutur.
 
-    bar[0] = 9;
+    bar[0] = 9; //bar'ın 0. elemanına 9 atar.
 
-    console.log(foo[0], bar[0]); // => 9, 9
+    console.log(foo[0], bar[0]); // => 9, 9 //Kendisiyle değilde adresiyle çalıştığımız için foo'nunda 0. elemanı da 9 olur
     ```
 
 **[⬆ back to top](#table-of-contents)**
