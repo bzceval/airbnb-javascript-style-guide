@@ -1,8 +1,11 @@
 # Airbnb JavaScript Style Guide() {
+# Airbnb JavaScript Still Klavuzu() {
 
 *A mostly reasonable approach to JavaScript*
+*JavaScript'e çoğunlukla büyük ölçüde mantıklı makul bir yaklaşım*
 
 > **Note**: this guide assumes you are using [Babel](https://babeljs.io), and requires that you use [babel-preset-airbnb](https://npmjs.com/babel-preset-airbnb) or the equivalent. It also assumes you are installing shims/polyfills in your app, with [airbnb-browser-shims](https://npmjs.com/airbnb-browser-shims) or the equivalent.
+> **Note**: Bu kılavuz sizin [Babel](https://babeljs.io) kullandığınızı varsayar, ve [babel-preset-airbnb](https://npmjs.com/babel-preset-airbnb) ya da benzerini yükleminizi gerektirir. Ayrıca bu kılavuz uygulamanızda shims/polyfills ile beraber [airbnb-browser-shims](https://npmjs.com/airbnb-browser-shims)ya da benzerini yüklediğinizi varsayar.
 
 [![Downloads](https://img.shields.io/npm/dm/eslint-config-airbnb.svg)](https://www.npmjs.com/package/eslint-config-airbnb)
 [![Downloads](https://img.shields.io/npm/dm/eslint-config-airbnb-base.svg)](https://www.npmjs.com/package/eslint-config-airbnb-base)
@@ -11,7 +14,7 @@
 This guide is available in other languages too. See [Translation](#translation)
 
 Other Style Guides
-
+Diğer Stil Kılavuzları
   - [ES5 (Deprecated)](https://github.com/airbnb/javascript/tree/es5-deprecated/es5)
   - [React](react/)
   - [CSS-in-JavaScript](css-in-javascript/)
