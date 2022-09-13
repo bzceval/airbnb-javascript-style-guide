@@ -22,14 +22,15 @@ Diğer Stil Kılavuzları
   - [Ruby](https://github.com/airbnb/ruby)
 
 ## Table of Contents
+## İçerik Listesi
 
-  1. [Types](#types)
-  1. [References](#references)
-  1. [Objects](#objects)
-  1. [Arrays](#arrays)
+  1. [Types (Türler)](#types)
+  1. [References (Referanslar)](#references)
+  1. [Objects (Objeler)](#objects)
+  1. [Arrays (Diziler)](#arrays)
   1. [Destructuring](#destructuring)
-  1. [Strings](#strings)
-  1. [Functions](#functions)
+  1. [Strings (Metinler)](#strings)
+  1. [Functions (Fonksiyonlar)](#functions)
   1. [Arrow Functions](#arrow-functions)
   1. [Classes & Constructors](#classes--constructors)
   1. [Modules](#modules)
