@@ -114,37 +114,44 @@ Diğer Stil Kılavuzları
 
 ## References
 ## Referanslar
+<!-- Bir değişken bir sabit tanımlamamız bir referanstır. -->
+
+<!-- (reference: a - b variable) -->
+<!-- var ile oluşturulan yapı global ölçekte erişilebilir hale gelir. -->
+<!-- const ve let ile tanımlanan referans block ölçekte olduğu için dışarıda erişilebilir değildir.
+Bu durum büyük ölçekteki uygulamamızın birbiriyle çakışmasını ya da birbirine etkilemesinin önüne geçer. -->
 
   <a name="references--prefer-const"></a><a name="2.1"></a>
   - [2.1](#references--prefer-const) Use `const` for all of your references; avoid using `var`. eslint: [`prefer-const`](https://eslint.org/docs/rules/prefer-const), [`no-const-assign`](https://eslint.org/docs/rules/no-const-assign)
-  - [2.1](#references--prefer-const) Use `const` for all of your references; avoid using `var`. eslint: [`prefer-const`](https://eslint.org/docs/rules/prefer-const), [`no-const-assign`](https://eslint.org/docs/rules/no-const-assign)
+  - [2.1](#references--prefer-const) Tüm referanslarınız için `const` kullanabilirsiniz; `var` ile referans oluşturmaktan kaçınmalısınız. Yardım eder => eslint: [`prefer-const`](https://eslint.org/docs/rules/prefer-const), [`no-const-assign`](https://eslint.org/docs/rules/no-const-assign)
 
     > Why? This ensures that you can’t reassign your references, which can lead to bugs and difficult to comprehend code.
-    > Neden? This ensures that you can’t reassign your references, which can lead to bugs and difficult to comprehend code.
+    > Neden? Bu sizin referanslarınızı tekrardan atama yapmamanızı sağlar. Bu kod içerisinde hatalara(bug) ve daha kolay anlaşılmayan kodlara yol açar.
 
     ```javascript
-    // bad
+    // bad (kötü)
     var a = 1;
     var b = 2;
 
-    // good
+    // good (iyi)
     const a = 1;
     const b = 2;
     ```
 
   <a name="references--disallow-var"></a><a name="2.2"></a>
   - [2.2](#references--disallow-var) If you must reassign references, use `let` instead of `var`. eslint: [`no-var`](https://eslint.org/docs/rules/no-var)
-
-    > Why? `let` is block-scoped rather than function-scoped like `var`.
+  - [2.2](#references--disallow-var) Eğer tekrar atama yapmalıysan `var` yerine `let` kullanmalısın. Bunu size sağlayacak olan esLint kuralına `no-var` denir. eslint: [`no-var`](https://eslint.org/docs/rules/no-var)
+    > Why? `let` is block-scoped rather than function-scoped like `var`.<br>
+    > Neden? `let`,`var`ın olduğu gibi function-scoped'dan ziyade block-scoped'tur.
 
     ```javascript
-    // bad
+    // bad (kötü)
     var count = 1;
     if (true) {
       count += 1;
     }
 
-    // good, use the let.
+    // good, use the let. (iyi, let kullanın)
     let count = 1;
     if (true) {
       count += 1;
@@ -152,10 +159,14 @@ Diğer Stil Kılavuzları
     ```
 
   <a name="references--block-scope"></a><a name="2.3"></a>
-  - [2.3](#references--block-scope) Note that both `let` and `const` are block-scoped, whereas `var` is function-scoped.
+  - [2.3](#references--block-scope) Note that both `let` and `const` are block-scoped, whereas `var` is function-scoped.<br>
+  - [2.3](#references--block-scope) Aklınızda bulunsun, `let` ve `const` anahtar kelimelerinin block-scoped'tur, halbuki `var` is function-scoped'tur.
 
     ```javascript
     // const and let only exist in the blocks they are defined in.
+    // const ve let anahtar kelimeleri sadece tanımlandıklarının blokların içinde var olurlar.
+    // block-scoped daha değerlidir çünkü kullanılmayan değişkenler bellek tarafında fazla yer tutarlar.
+
     {
       let a = 1;
       const b = 1;
@@ -163,13 +174,15 @@ Diğer Stil Kılavuzları
     }
     console.log(a); // ReferenceError
     console.log(b); // ReferenceError
-    console.log(c); // Prints 1
+    console.log(c); // Prints 1 (Ekranda 1 gösterir)
     ```
+    
 
     In the above code, you can see that referencing `a` and `b` will produce a ReferenceError, while `c` contains the number. This is because `a` and `b` are block scoped, while `c` is scoped to the containing function.
+    `c` bir çıktı veriyorken `a` ve `b` referanslarının bir ReferenceError hatasını ürettiğini  görebilirsiniz. Çünkü `c` function-scoped iken `a` ve `b` birer block-scoped olarak tanımlanmıştır.
 
 **[⬆ back to top](#table-of-contents)**
-
+**[⬆ yukarı çık](#table-of-contents)**
 ## Objects
 
   <a name="objects--no-new"></a><a name="3.1"></a>
