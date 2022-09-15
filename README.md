@@ -26,7 +26,7 @@ Diğer Stil Kılavuzları
 
   1. [Types (Türler)](#types)
   1. [References (Referanslar)](#references)
-  1. [Objects (Objeler)](#objects)
+  1. [Objects (Nesneler)](#objects)
   1. [Arrays (Diziler)](#arrays)
   1. [Destructuring](#destructuring)
   1. [Strings (Metinler)](#strings)
@@ -183,10 +183,13 @@ Bu durum büyük ölçekteki uygulamamızın birbiriyle çakışmasını ya da b
 
 **[⬆ back to top](#table-of-contents)**
 **[⬆ yukarı çık](#table-of-contents)**
+
+
 ## Objects
+## Nesneler
 
   <a name="objects--no-new"></a><a name="3.1"></a>
-  - [3.1](#objects--no-new) Use the literal syntax for object creation. eslint: [`no-new-object`](https://eslint.org/docs/rules/no-new-object)
+  - [3.1](#objects--no-new) Use the literal syntax for object creation. eslint: [`no-new-object`](https://eslint.org/docs/rules/no-new-object)  - [3.1](#objects--no-new) Nesne üretii için tam söz dizimini kullanın. eslint: [`no-new-object`](https://eslint.org/docs/rules/no-new-object)
 
     ```javascript
     // bad

@@ -1,0 +1,24 @@
+{
+  "name": "airbnb-javascript-style-guide",
+  "version": "1.0.0",
+  "description": "*A mostly reasonable approach to JavaScript*\r *JavaScript'e çoğunlukla büyük ölçüde mantıklı makul bir yaklaşım*",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bzceval/airbnb-javascript-style-guide.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bzceval/airbnb-javascript-style-guide/issues"
+  },
+  "homepage": "https://github.com/bzceval/airbnb-javascript-style-guide#readme",
+  "devDependencies": {
+    "eslint": "^8.23.1"
+  }
+}
